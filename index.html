@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L'Aurora Artisan Café</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <video
+      class="bg-video"
+      src="./contents/1102.mp4"
+      autoplay
+      muted
+      loop
+    ></video>
+    <header class="site-header">
+      <a class="brand" href=""
+        ><span>L'Aurora</span><small>ARTISAN CAFÉ</small></a
+      >
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#home">Home</a><a href="#menu">Menu</a
+        ><a href="#specialties">Signature Dishes</a
+        ><a href="#reservation">Reservations</a><a href="#about">About Us</a
+        ><a href="#reviews">Reviews</a>
+      </nav>
+      <div class="header-actions">
+        <label class="language-picker" aria-label="Select language">
+          <span class="language-icon">文</span>
+          <select id="language-select" aria-label="Select language">
+            <option value="en">EN</option>
+            <option value="ru">RU</option>
+            <option value="uz">UZ</option>
+          </select>
+        </label>
+        <button class="search" aria-label="Search">⌕</button
+        ><button class="bag" aria-label="Shopping bag">🛒<i class="numOfOrders">0</i></button
+        ><a class="button button-small" href="#reservation">Book a Table</a
+        >
+      </div>
+    </header>
+
+    <div class="cart__container display__off">
+      <div class="cart">
+        <div class="cart__top">
+          <div class="left">
+            <span>made with love</span>
+            <h2>Your Orders</h2>
+            <p>Handcrafted fresh to order. Review ingredients, choose dining preference, and personalize barista notes.</p>
+          </div>
+          <div class="right">
+            <a class="close__orders" href="#menu"><-- continue exploring menu</a>
+          </div>
+        </div>
+        <div class="cart__bottom">
+          <div class="left">
+            <div class="dish__list">
+              <div class="list__top">
+                <h4>Meals</h4>
+                <span class="all__dishes"><span class="dishes__num">4</span>Dishes</span>
+                <button class="clear__allOrders">🗑️Clear Orders</button>
+              </div>
+              <div class="list__bottom"></div>
+            </div>
+            <div class="additionals"></div>
+            <div class="other__meals"></div>
+          </div>
+          <div class="right"></div>
+        </div>
+      </div>
+    </div>
+    <div class="search__container display__off">
+      <div class="searchbox">
+        <button class="close__search">❌</button>
+        <div class="input__box"><span>⌕</span><input class="search__input" type="text" placeholder="Name of the food..."></div>
+        <div class="list__search"></div>
+      </div>
+    </div>
+
+    <main>
+      <section class="hero section-wrap" id="home">
+        <div class="hero-copy">
+          <span class="eyebrow"
+            ><b>●</b> TRIBECA'S PREMIUM ROASTERY & KITCHEN</span
+          >
+          <h1>Good Food.<br /><em>Great Mood.</em></h1>
+          <p>
+            Discover delicious flavours, freshly prepared meals, and
+            unforgettable moments crafted daily with ethically sourced
+            single-origin coffee and artisanal ingredients.
+          </p>
+          <div class="hero-buttons">
+            <a class="button exp__menu" href="#menu">Explore Menu <span>➜</span></a
+            ><a class="button button-pale" href="#reservation">Book a Table</a>
+          </div>
+          <div class="trust-row">
+            <span>⭐ 4.9 / (1,840+ reviews)</span
+            ><span>♧ 100% Organic Flour</span><span>♨ Farm-to-Table Daily</span>
+          </div>
+        </div>
+        <div class="hero__thumbnail">
+          <img src="./contents/logo.png" width="400" height="400" alt="">
+          <a href="https://www.google.com/maps/place/Zamin+Oilaviy+Restorani/@41.0062124,71.6695495,17z/data=!3m1!4b1!4m6!3m5!1s0x38bb4deee4ae0969:0x6f535c01414b4f7e!8m2!3d41.0062124!4d71.6721244!16s%2Fg%2F11d_z6z080?entry=ttu&g_ep=EgoyMDI2MTEwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">📍Location</a>
+        </div>
+      </section>
+
+      <section class="menu-section" id="menu">
+        <div class="section-wrap">
+          <div class="section-heading left-heading">
+            <span class="eyebrow">SAVOUR THE CRAFT</span>
+            <h2>Popular Creations & Daily Bakes</h2>
+            <p>Handcrafted selections prepared fresh in our open kitchen.</p>
+            <span class="opening">♙ Kitchen Open: 7:00 AM – 9:30 PM</span>
+          </div>
+          <div class="filters">
+            <button class="selected all__items">Random meals</button>
+            <button class="burgers">Burgers</button>
+            <button class="pasta">Pasta</button>
+            <button class="sandwiches">Sandwiches & Wraps</button>
+            <button class="fried-chicken">Fried Chicken</button>
+            <button class="pizza">Pizza</button>
+            <button class="snacks">Snacks</button>
+            <button class="desserts">Desserts</button>
+            <button class="coffee">Coffee & Drinks</button>
+          </div>
+          <div class="product-grid" id="product-grid"></div>
+        </div>
+      </section>
+
+      <section class="special-section" id="specialties">
+        <div class="section-wrap">
+          <div class="center-heading">
+            <span class="eyebrow">MASTERy ON A PLATE</span>
+            <h2>Curated Seasonal<br /><em>Specialties</em></h2>
+            <p>
+              Every dish reflects our obsession with provenance, technique, and
+              harmonious flavors.
+            </p>
+          </div>
+          <div class="special-card">
+            <div class="special-photo">
+              <span class="signature-label"
+                >CHEF'S SIGNATURE<br /><b>Slow Roasted Porchetta Bowl</b></span
+              ><strong>$28.00</strong>
+            </div>
+            <div class="special-copy">
+              <span class="eyebrow">48-HOUR BRINE & SLOW ROASTING</span>
+              <h3>A Symphony of Crisp Crackling & Tender Botanicals</h3>
+              <p>
+                Infused with wild fennel pollen, rosemary, and Hudson Valley
+                garlic, our heritage pork belly undergoes a precision 48-hour
+                cure followed by a 6-hour slow confit before high-heat
+                blistering.
+              </p>
+              <div class="flavour-box">
+                <b>FLAVOR PROFILE & BALANCE</b>
+                <div>
+                  Herbal Bitterness <span>95%</span><i style="--bar: 95%"></i>
+                </div>
+                <div>
+                  Crackling Crunch <span>89%</span><i style="--bar: 89%"></i>
+                </div>
+                <div>
+                  Citrus Acidity <span>70%</span><i style="--bar: 70%"></i>
+                </div>
+              </div>
+              <a href="#reservation" class="button button-dark"
+                >Reserve a Table to Taste ▣</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reservation-section" id="reservation">
+        <div class="section-wrap reservation-layout">
+          <div class="reservation-photo">
+            <span class="eyebrow">HOSPITALITY FIRST</span>
+            <h2>Reserve Your<br />Experience</h2>
+            <p>
+              From casual evening bites to celebratory gatherings, our dining
+              spaces are designed for every detail.
+            </p>
+            <div class="perks">
+              <span>✦ &nbsp; Instant SMS and email booking confirmation</span
+              ><span
+                >♨ &nbsp; Chef's Table & intimate leather booth seating</span
+              ><span
+                >♧ &nbsp; Curated zero-proof pairing program available</span
+              >
+            </div>
+          </div>
+          <form class="booking-form">
+            <h2>Book a Table</h2>
+            <p>
+              Select your party details below. Walk-ins are always welcomed at
+              the counter.
+            </p>
+            <label>Number of Guests</label>
+            <div class="guest-options">
+              <span class="numG1">1</span><span class="chosen numG2">2</span><span class="numG4">4</span
+              ><span class="numG6">6</span><span class="numG8">8+ Private</span>
+            </div>
+            <div class="form-row">
+              <div>
+                <label for="date">Reservation Date</label
+                ><input id="date" type="text" placeholder="DD/MM/YYYY" />
+              </div>
+              <div>
+                <label>Preferred Seating Time</label>
+                <div class="time-options">
+                  <span class="time1">10:00 AM</span><span class="chosen time2">12:30 PM</span
+                  ><span class="time3">3:00 PM</span><span class="time4">6:00 PM</span><span class="time5">8:00 PM</span>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div>
+                <label for="name">Full Name</label
+                ><input id="name" placeholder="Elena Rostova" />
+              </div>
+              <div>
+                <label for="email">Email Address</label
+                ><input
+                  id="email"
+                  type="email"
+                  placeholder="elena@example.com"
+                />
+              </div>
+            </div>
+            <label for="phone">Phone Number</label
+            ><input id="phone" placeholder="+1 (555) 254-9900" />
+            <label for="requests"
+              >Dietary Restrictions or Special Occasions</label
+            ><textarea
+              id="requests"
+              placeholder="e.g. Birthday celebration, gluten sensitivity, outdoor patio preference..."
+            ></textarea>
+            <button type="button" class="button submit-button">
+              ♧ &nbsp; Confirm Reservation
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section class="about-section section-wrap" id="about">
+        <div class="about-photo">
+          <span>♙<br /><b>Direct Trade</b><br />High & Sustainable Crops</span>
+        </div>
+        <div class="about-copy">
+          <span class="eyebrow">OUR HERITAGE & PHILOSOPHY</span>
+          <h2>The Story Behind Every Cup & Plate</h2>
+          <p>
+            L'Aurora was born from a singular passion: elevating daily cafe
+            rituals into sensory art. Founded in Tribeca in 2018, we bridge
+            micro-lot roasting with chef-driven farm-to-table cuisine.
+          </p>
+          <div class="values">
+            <div>
+              <b>♧ &nbsp; Ethically Sourced Coffee Beans</b>
+              <p>
+                We partner directly with smallholder farmers in Colombia and
+                Ethiopia, paying 2x fair trade minimums.
+              </p>
+            </div>
+            <div>
+              <b>♨ &nbsp; Daily 5:00 AM Sourdough & Pastry Bake</b>
+              <p>
+                Wild fermented sourdough loaves and laminated AOP French butter
+                pastries rolled fresh every morning.
+              </p>
+            </div>
+            <div>
+              <b>✧ &nbsp; 0% Artificial Additives or Preservatives</b>
+              <p>
+                Clean whole ingredients, natural honeys, unrefined sugars, and
+                organic dairy from local regenerative farms.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="stats">
+          <div>
+            <strong>18k+</strong><b>Monthly Coffees Served</b
+            ><small>Pulled on our customized Slayer espresso gear</small>
+          </div>
+          <div>
+            <strong>4.9 ★</strong><b>Average Customer Rating</b
+            ><small>Over 1,840 verified Google & Yelp reviews</small>
+          </div>
+          <div>
+            <strong>6</strong><b>Master Roasters & Chefs</b
+            ><small>Culinary talents dedicated to uncompromising craft</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews-section" id="reviews">
+        <div class="section-wrap">
+          <div class="center-heading">
+            <span class="eyebrow">COMMUNITY LOVE</span>
+            <h2>Loved by Coffee Enthusiasts &<br />Gourmands</h2>
+            <p>
+              Discover why our guests make L'Aurora their cherished culinary
+              ritual.
+            </p>
+          </div>
+          <div class="review-grid">
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                “The Spanish Saffron Latte paired with their Truffle Burger is
+                culinary perfection. L'Aurora has completely transformed our
+                weekend brunch routine.”
+              </p>
+              <b>👩🏻 &nbsp; Elena Rostova</b
+              ><small>Food Critic & Tribeca Resident</small>
+            </article>
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                “A coffee roaster myself, their Ethiopian single origin
+                pour-over is arguably the cleanest cup in Manhattan. The pastry
+                laminate is textbook French mastery.”
+              </p>
+              <b>👨🏽 &nbsp; Marcus Vance</b
+              ><small>Specialty Coffee Q-Grader</small>
+            </article>
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                “We hosted our private anniversary dinner in their back atrium.
+                The Slow Roasted Porchetta and natural wine pairings left all
+                twelve of our guests speechless.”
+              </p>
+              <b>👨🏻 &nbsp; Dr. Sophia Lin</b><small>Private Event Host</small>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-wrap footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#"
+            ><span>L'Aurora</span><small>ARTISAN CAFÉ & ROASTERY</small></a
+          >
+          <p>
+            Good Food. Great Mood. Crafting exceptional artisanal coffee,
+            slow-fermented bakery, and gourmet culinary experiences since 2018.
+          </p>
+          <div class="socials">
+            <a href="#">◎</a><a href="#">f</a><a href="#">♪</a><a href="#">✦</a>
+          </div>
+        </div>
+        <div>
+          <h3>QUICK LINKS</h3>
+          <a href="#menu">Menu</a><a href="#reservation">Table Booking</a
+          ><a href="#specialties">Private Events</a><a href="#about">Catering</a
+          ><a href="#about">Gift Cards</a><a href="#about">Coffee Roastery</a>
+        </div>
+        <div>
+          <h3>HOURS & LOCATION</h3>
+          <p>◷ &nbsp; Opening Hours</p>
+          <p>Mon–Fri: 7:00 AM – 10:00 PM<br />Sat–Sun: 8:00 AM – 11:00 PM</p>
+          <p>♧ &nbsp; Roastery & Café<br />482 Artisan Way, Tribeca, NY</p>
+          <p>♧ &nbsp; +1 (555) 382-9014</p>
+        </div>
+        <div class="newsletter">
+          <h3>NEWSLETTER</h3>
+          <p>
+            Subscribe for seasonal tasting flights, roastery drops, and event
+            invitations.
+          </p>
+          <form>
+            <input type="email" placeholder="Your email address" /><button
+              type="button"
+            >
+              ➜
+            </button>
+          </form>
+          <small>No spam. Unsubscribe anytime with one tap.</small>
+        </div>
+      </div>
+      <div class="footer-bottom section-wrap">
+        <span
+          >© 2024 L'Aurora Artisan Café & Roastery. All rights reserved.</span
+        ><span
+          >Dietary & Allergen Statement: Our kitchen and roastery handle dairy,
+          nuts, gluten, and sesame seeds.</span
+        >
+      </div>
+    </footer>
+
+    <script type="module" src="./src/index.ts"></script>
+  </body>
+</html>
