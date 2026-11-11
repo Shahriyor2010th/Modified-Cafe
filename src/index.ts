@@ -49,7 +49,7 @@ function renderAllProducts() {
     box.classList.add("product__box");
     box.innerHTML = `
             <div class="img__container">
-                <img  src="./menu_item_images/${prod.id}.png" alt="${shownProduct.name}">
+                <img  src="/menu_item_images/${prod.id}.png" alt="${shownProduct.name}">
             </div>
             <div class="product-info">
                 <h3>${shownProduct.name}</h3>
@@ -156,7 +156,7 @@ function renderCategoryProducts(item: Partial<mealType>[]) {
     box.classList.add("product__box");
     box.innerHTML = `
             <div class="img__container">
-                <img  src="./menu_item_images/${prod.id}.png" alt="${shownProduct.name}">
+                <img  src="/menu_item_images/${prod.id}.png" alt="${shownProduct.name}">
             </div>
             <div class="product-info">
                 <h3>${shownProduct.name}</h3>
@@ -358,7 +358,7 @@ function renderCartContents() {
       let box = document.createElement("div");
       box.innerHTML = `
         <div class='left'>
-          <img src="./menu_item_images/${el.id}.png" width= "100" height="100">
+          <img src="/menu_item_images/${el.id}.png" width= "100" height="100">
         <div class="order__info">
           <h1>${shownOrder.name}</h1>
           <p>${shownOrder.description}</p>
@@ -592,7 +592,7 @@ SearchInput.addEventListener("input", (val) => {
       box.classList.add("result__box");
       box.innerHTML = `
             <div class="resultimg__container">
-                <img  src="./menu_item_images/${el.id}.png" alt="${shownProduct.name}">
+                <img  src="/menu_item_images/${el.id}.png" alt="${shownProduct.name}">
             </div>
             <div class="product-info">
                 <h3>${shownProduct.name}</h3>

@@ -6,7 +6,7 @@
   font-family: "Plus Jakarta Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("./fonts/plus-jakarta-sans-v12-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/fonts/plus-jakarta-sans-v12-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* plus-jakarta-sans-700 - latin */
@@ -15,7 +15,7 @@
   font-family: "Plus Jakarta Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("./fonts/plus-jakarta-sans-v12-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/fonts/plus-jakarta-sans-v12-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* plus-jakarta-sans-800 - latin */
@@ -24,7 +24,7 @@
   font-family: "Plus Jakarta Sans";
   font-style: normal;
   font-weight: 800;
-  src: url("./fonts/plus-jakarta-sans-v12-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/fonts/plus-jakarta-sans-v12-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* manrope-regular - latin */
@@ -33,7 +33,7 @@
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
-  src: url("./fonts/manrope-v23-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/fonts/manrope-v23-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* Base styles: site-wide defaults, typography, and shared layout. */
